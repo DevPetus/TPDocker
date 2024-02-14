@@ -2,7 +2,7 @@ FROM node:12-alpine3.9
 
 WORKDIR /app
 
-RUN npm install
+RUN npm install --production
 
 COPY . /app/
 

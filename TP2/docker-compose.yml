@@ -1,8 +1,8 @@
-version: '3.9'
+version: "3.9"
 
 services:
   node:
-    build: ./app
+    build: ma_super_app
     ports:
       - "8080:80"
     depends_on:
@@ -17,7 +17,7 @@ services:
       MYSQL_USER: user
       MYSQL_PASSWORD: userpsw
     ports:
-      - "8080:80"  
+      - "3000:80"
     volumes:
       - mysql_data:/var/lib/mysql
 
