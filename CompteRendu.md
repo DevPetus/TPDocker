@@ -10,3 +10,8 @@ c : La procédure 6 est la plus automatisée c'est la meilleure façon de faire 
 
 7.a: docker pull mysql:5.7
 	 docker pull phpmyadmin
+b : docker run --name mysql -e MYSQL_ROOT_PASSWORD=lessgo123 -d mysql:5.7
+docker run --name phpmyadmin --link mysql -e PMA_HOST=mysql -e PMA_PORT=3306 -d phpmyadmin -p 8080:80
+
+8.a: Docker Compose permet de deployer simultanément une multitude de conteneurs, résultant en une infrastructure entière deployable quasi instantanément et de manière 100% reproductible
+b: les variables environnement
