@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  web:
+    image: praqma/network-multitool
+    command: sleep infinity
+    networks:
+      - frontend
+
+  app:
+    image: praqma/network-multitool
+    command: sleep infinity
+    networks:
+      - frontend
+      - backend
+
+  db:
+    image: praqma/network-multitool
+    command: sleep infinity
+    networks:
+      - backend
+
+networks:
+  frontend:
+  backend:
